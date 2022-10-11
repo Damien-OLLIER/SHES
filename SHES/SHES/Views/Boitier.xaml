@@ -29,12 +29,16 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label x:Name="SwitchName" Text="Connecté" Font="Bold,21" Grid.Row="0" Grid.Column="1" Margin="50,45,0,0"></Label>
-            <Label x:Name="Batterie" Text="Batterie" Grid.Row="1" Grid.Column="1" Margin="30,8,0,0" Font="Bold,21" ></Label>
+            <Label x:Name="SwitchName" Text="Connecté" Font="Bold,24" Grid.Row="0" Grid.Column="1" Margin="-20,55,0,0"></Label>
+            <Switch x:Name="Switch1" Margin="0,-22,-165,0" Grid.Row="0" Grid.Column="0"  OnColor="White" ThumbColor="Green" Toggled="Switch_Toggled_1"/>
+            <Label x:Name="Batterie" Text="Batterie" Grid.Row="0" Grid.Column="1" Margin="-20,110,0,0" Font="Bold,24" ></Label>
+            <Image Source="Battery.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="110,-75,30,0" HeightRequest="50" WidthRequest="50" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"></Image>
             <Label x:Name="NomBoitier" Text="Modèle de boitier" Grid.Row="0" Grid.RowSpan="2" Margin="10,8,0,0" Font="Bold,21"></Label>
-            <Label x:Name="Bluetooth" Text="Bluetooth connection" Grid.Row="2"></Label>
-            <Image Source="DogPicture.jpg" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="10,45,30,0" HeightRequest="150" WidthRequest="150" BackgroundColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"></Image>
-            <Switch x:Name="Switch1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" OnColor="White" ThumbColor="Green" Margin="0,-95,140,0" Toggled="Switch_Toggled_1"/>
+            <Image Source="BoitierConnecte.png" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="10,45,30,0" HeightRequest="150" WidthRequest="150" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"></Image>
+            <Label x:Name="typeConnection" Text="Connection" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Margin="-20,165,0,0" Font="Bold,23"></Label>
+            <Image Source="BluetoothWhite.png" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="110,-20,30,0" HeightRequest="50" WidthRequest="50" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"></Image>
+            <Label x:Name="LabelPriseSang" Text="Dernière prise de sang: " Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,50,0,0" Font="Bold,21"></Label>
+            <Label x:Name="LabelPriseSangDate" Text="20/10/2022" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"  Margin="45,45,0,0" Font="Bold,25"></Label>
 
         </Grid>
     </ContentPage.Content>
