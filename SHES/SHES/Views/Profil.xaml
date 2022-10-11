@@ -32,8 +32,8 @@
 
             </Grid.RowDefinitions>
 
-                       
-            <Label Text="Damien OLLIER" FontFamily="bold" Font="Bold,21" Grid.Column="0" Grid.Row="0" Margin="20,20,0,0"></Label>
+
+            <Label Text="Amie Baxter" FontFamily="bold" Font="Bold,21" Grid.Column="0" Grid.Row="0" Margin="35,20,0,0"></Label>
             
             <Frame Margin="10" Grid.Column="0"
             BorderColor="Black"
@@ -45,16 +45,18 @@
 
                 <!--photos de la petite famille, To modify: Potentiellement recadrer les photos-->
                 
-                <Image Source="DogPicture.PNG" Margin="-40" HeightRequest="160" WidthRequest="160" >
+                <Image Source="face1.jpg" Margin="-40" HeightRequest="160" WidthRequest="160" >
                 </Image>
             </Frame>
 
             <!--<Line WidthRequest="10" HeightRequest="10" Opacity="100" BackgroundColor="Yellow" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,0"></Line>-->
-            <Switch x:Name="Switch1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" OnColor="White" ThumbColor="Green" Margin="0,-95,140,0" Toggled="Switch_Toggled_1"/>
-            <Label x:Name="SwitchName" Text="Connecté" Font="Bold,21" Grid.Row="1" Grid.Column="1" Margin="50,15,0,0"></Label>
+                        
             <Label x:Name="GrossesseDate" Text="Début de grossesse:" Font="Bold,21" Grid.Row="1" Grid.Column="1" Margin="-26,75,0,0"></Label>
-            <Label x:Name="Date" Text="24/03/1998" Font="Bold,21" Grid.Row="1" Grid.Column="1" Margin="20,110,0,0"></Label>
+            <Label x:Name="Date" Text="11/10/2022" Font="21" Grid.Row="1" Grid.Column="1" Margin="20,110,0,0"></Label>
             <Label x:Name="Congratulation" Text="Suivi de grossesse" Font="Bold,25" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="86,-3,0,0"  ></Label>
+            <Label x:Name="RégimeAlimentaire" Text="Régime alimentaire:" Font="Bold,21" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="170,0,0,0"></Label>
+            <Label x:Name="RégimeAlimentaireName" Text="Fléxitarienne" Font="19" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="215,30,0,0"></Label>
+
             <!--<controls:Calendar x:Name="PregnencyCalendar"
         Day="14"
         Month="5"
