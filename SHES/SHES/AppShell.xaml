@@ -31,9 +31,9 @@
 
     <TabBar>
         <ShellContent Title="Profil" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:Profil}" />
-        <ShellContent Title="Courbes" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:courbes}" />
-        <ShellContent Title="Boitier" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:Boitier}" />
-        <ShellContent Title="Alimentation" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:Alimentation}" />
+        <ShellContent Title="Courbes" Icon="Graphique.png" ContentTemplate="{DataTemplate local:courbes}" />
+        <ShellContent Title="Boitier" Icon="Bluetooth.png" ContentTemplate="{DataTemplate local:Boitier}" />
+        <ShellContent Title="Alimentation" Icon="Food.png" ContentTemplate="{DataTemplate local:Alimentation}" />
     </TabBar>
 
     <!--

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SHES.Views.Profil"
-             xmlns:vm="clr-namespace:SHES.ViewModels"
+             xmlns:vm="clr-namespace:SHES.ViewModels" xmlns:controls="clr-namespace:Xamarin.Plugin.Calendar.Controls;assembly=Xamarin.Plugin.Calendar"
              Title="{Binding Title}" Appearing="ContentPage_Appearing">
 
     <ContentPage.BindingContext>
@@ -16,8 +16,75 @@
     </ContentPage.Resources>
     
     <ContentPage.Content>
-        <StackLayout>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="190"/>
+                <ColumnDefinition Width="185"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="160"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="*"/>
+
+
+            </Grid.RowDefinitions>
+
+                       
+            <Label Text="Damien OLLIER" FontFamily="bold" Font="Bold,21" Grid.Column="0" Grid.Row="0" Margin="20,20,0,0"></Label>
             
-        </StackLayout>
+            <Frame Margin="10" Grid.Column="0"
+            BorderColor="Black"
+                                                                   CornerRadius="50"
+                                                                   HeightRequest="80"
+                                                                   WidthRequest="80"
+                                                                   IsClippedToBounds="True"
+                                                                   HorizontalOptions="Center" Grid.Row="1" >
+
+                <!--photos de la petite famille, To modify: Potentiellement recadrer les photos-->
+                
+                <Image Source="DogPicture.PNG" Margin="-40" HeightRequest="160" WidthRequest="160" >
+                </Image>
+            </Frame>
+
+            <!--<Line WidthRequest="10" HeightRequest="10" Opacity="100" BackgroundColor="Yellow" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,0"></Line>-->
+            <Switch x:Name="Switch1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" OnColor="White" ThumbColor="Green" Margin="0,-95,140,0" Toggled="Switch_Toggled_1"/>
+            <Label x:Name="SwitchName" Text="Connecté" Font="Bold,21" Grid.Row="1" Grid.Column="1" Margin="50,15,0,0"></Label>
+            <Label x:Name="GrossesseDate" Text="Début de grossesse:" Font="Bold,21" Grid.Row="1" Grid.Column="1" Margin="-26,75,0,0"></Label>
+            <Label x:Name="Date" Text="24/03/1998" Font="Bold,21" Grid.Row="1" Grid.Column="1" Margin="20,110,0,0"></Label>
+            <Label x:Name="Congratulation" Text="Suivi de grossesse" Font="Bold,25" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="86,-3,0,0"  ></Label>
+            <!--<controls:Calendar x:Name="PregnencyCalendar"
+        Day="14"
+        Month="5"
+        Year="2022"
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,-110,0,0"></controls:Calendar>-->
+
+            <controls:Calendar  Grid.Column="0" Grid.Row="3" VerticalOptions="FillAndExpand" Grid.ColumnSpan="2" Margin="15,-110,0,0" x:Name="PregnencyCalendar"
+        Day="14"
+        Month="5"
+        Year="2022"
+        HorizontalOptions="FillAndExpand"
+                    Events="{Binding Events}">
+                
+                <controls:Calendar.EventTemplate>
+                    <DataTemplate>
+                        <StackLayout
+                    Padding="0,0,0,0">
+                            <Label 
+                        Text="{Binding Name}"
+                        FontAttributes="Bold"
+                        FontSize="Medium" />
+                            <Label
+                        Text="{Binding Description}"
+                        FontSize="Small"
+                        LineBreakMode="WordWrap" />
+                        </StackLayout>
+                    </DataTemplate>
+                </controls:Calendar.EventTemplate>
+            </controls:Calendar>
+        </Grid>        
     </ContentPage.Content>
 </ContentPage>

@@ -28,8 +28,8 @@
                 <!--Contenu du StackLayout-->
                 <CollectionView.ItemTemplate >
                     <DataTemplate>
-                        <pv:PancakeView BackgroundColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"   >
-                            <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                        <pv:PancakeView BackgroundColor="Black" VerticalOptions="Start" HorizontalOptions="FillAndExpand"   >
+                            <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
@@ -67,10 +67,9 @@
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-
                                         
                                         <!--On ajoute chaque composant dans un StackLayout-->
-                                        <StackLayout Grid.Column="0" Spacing="10">
+                                        <StackLayout Grid.Column="0">
 
                                             <!--Ou plusieurs StackLayout xD-->
                                             <!--Le contenu est le meme que celui de la CollectionView plus haut qui est instancié dans la mainPage.xaml.cs disponible à l'endroit "private ObservableCollection
@@ -78,20 +77,10 @@
                                             <StackLayout x:Name="imageview" BindableLayout.ItemsSource="{Binding familyMember}" HorizontalOptions ="Center"  VerticalOptions="StartAndExpand" >
                                                 <BindableLayout.ItemTemplate>
                                                     <DataTemplate>
-                                                        <!--cadre rond pour mettre les photos de la petite famille-->
-                                                        <Frame Margin="10"
-                                                                   BorderColor="Black"
-                                                                   VerticalOptions="StartAndExpand"
-                                                                   HeightRequest="800"
-                                                                   WidthRequest="260"
-                                                                   IsClippedToBounds="False"
-                                                                   HorizontalOptions="Center">
-                                                            <!--photos de la petite famille, To modify: Potentiellement recadrer les photos-->
-                                                            <!--<Image Source="{Binding Picture}" Aspect="AspectFit"  Margin="-20" WidthRequest="100"
-                                                                     VerticalOptions="StartAndExpand" >
-                                                            </Image>-->
-                                                            
-                                                        </Frame>
+                                                        <Image Source="{Binding Picture}" Aspect="AspectFit"  Margin="-10,0,-5,0" WidthRequest="400"
+                                                                     VerticalOptions="StartAndExpand"  >
+
+                                                        </Image>
                                                     </DataTemplate>
                                                 </BindableLayout.ItemTemplate>
                                             </StackLayout>

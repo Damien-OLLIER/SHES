@@ -25,15 +25,15 @@ namespace SHES.Views
         {
             return new ObservableCollection<Family>
             {
-                new Family { Name = "Poulet curry", Color = "#B96CBD", Icon = "GirlIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "22 Juin 1998", Picture = "CamillePicture.jpg", NegatifPoint = "Elle a tout le temps faim", PositifPoint = "S'énerve seulement quand elle a faim", Description = "Louloute au poil court" } } },
+                new Family { Name = "Poulet curry", Color = "#B96CBD", Icon = "GirlIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "S'énerve seulement quand elle a faim", Description = "Exemple de rectte" } } },
 
-                new Family { Name = "Viande rouge", Color = "#49A24D", Icon = "ManIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "24 Mars 1998", Picture = "DamienPicture.jpg", NegatifPoint = "Loulou trop calin", PositifPoint = "Loulou très calin", Description = "Loulou tres calme qui est amoureux de Camille" } } },
+                new Family { Name = "Viande rouge", Color = "#49A24D", Icon = "DogPicture.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Loulou très calin", Description = "Exemple de rectte" } } },
 
-                new Family { Name = "Crepes", Color = "#FDA838", Icon = "RabbitIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "20 Septembre 2022", Picture = "RabbitPicture.jpg", NegatifPoint = "Cacher tous les câbles électriques", PositifPoint = "Très doux et adore les caresses", Description = "Petite patate qui fait fondre votre cœur" } } },
+                new Family { Name = "Crepes", Color = "#FDA838", Icon = "RabbitIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Très doux et adore les caresses", Description = "Exemple de rectte" } } },
 
-                new Family { Name = "gauffres",  Color = "#F75355",  Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Prochainement", Picture = "DogPicture.jpg", NegatifPoint = "Ramasser son caca", PositifPoint = "Il peut sauver des vies en mer", Description = "Gros loulou aussi débile que son maitre" } } },
+                new Family { Name = "gauffres",  Color = "#F75355",  Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Il peut sauver des vies en mer", Description = "Exemple de rectte" } } },
 
-                new Family { Name = "Crumble aux pommes",  Color = "#00C6AE", Icon = "CatIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Prochainement", Picture = "CatPicture.jpg", NegatifPoint = "Il faut des câlins seulement quand il le souhaite", PositifPoint = "Son ronronnement vous réconfortera", Description = "Petit chat de la famille OLLIER. Très calin, il adorera reveiller camille à 4h du matin" } } },
+                new Family { Name = "Crumble aux pommes",  Color = "#00C6AE", Icon = "CatIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Son ronronnement vous réconfortera", Description = "Exemple de rectte" } } },
 
             };
         }
@@ -103,25 +103,46 @@ namespace SHES.Views
             this.BindingContext = this;
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
             PetitDejBtn.IsEnabled = false;
             DejBtn.IsEnabled = true;
             DinerBtn.IsEnabled = true;
+
+            CollectionViewAliment.IsVisible = false;
+            gif.IsVisible = true;
+            await Task.Delay(1000);
+            gif.IsVisible = false;
+
+            CollectionViewAliment.IsVisible = true;
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+        private async void Button_Clicked_1(object sender, EventArgs e)
         {
             PetitDejBtn.IsEnabled = true;
             DejBtn.IsEnabled = false;
             DinerBtn.IsEnabled = true;
+
+            CollectionViewAliment.IsVisible = false;
+            gif.IsVisible = true;
+            await Task.Delay(1000);
+            gif.IsVisible = false;
+            CollectionViewAliment.IsVisible = true;
         }
 
-        private void Button_Clicked_2(object sender, EventArgs e)
+        private async void Button_Clicked_2(object sender, EventArgs e)
         {
             PetitDejBtn.IsEnabled = true;
             DejBtn.IsEnabled = true;
             DinerBtn.IsEnabled = false;
+
+            CollectionViewAliment.IsVisible = false;
+            gif.IsVisible = true;
+            await Task.Delay(1000);
+            gif.IsVisible = false;
+
+            CollectionViewAliment.IsVisible = true;
+
         }
     }
 }

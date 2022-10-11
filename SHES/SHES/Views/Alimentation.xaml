@@ -19,8 +19,8 @@
 
     <ContentPage.Content>
         <StackLayout>
-                      
-            <CollectionView  Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" SelectionMode="Single" ItemsSource="{Binding MyFamily}" >
+            <Image x:Name="gif" Source="Loading.gif" IsAnimationPlaying="True" IsVisible="false" Margin="0,250,0,0"/>
+            <CollectionView x:Name="CollectionViewAliment" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" SelectionMode="Single" ItemsSource="{Binding MyFamily}" IsVisible="true" >
 
                 <!-- Titre en Haut du  StackLayout-->
                 <CollectionView.Header>
@@ -44,9 +44,9 @@
                 </CollectionView.ItemsLayout>
 
                 <!--Contenu du StackLayout-->
-                <CollectionView.ItemTemplate >
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <pv:PancakeView   BackgroundColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"   >
+                        <pv:PancakeView x:Name="PancakeViewAliment"  IsVisible="true" BackgroundColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"   >
                             <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -70,14 +70,14 @@
                                         <Grid HorizontalOptions="FillAndExpand">
 
                                             <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="150"/>
                                                 <ColumnDefinition Width="Auto"/>
                                                 <ColumnDefinition Width="3.5*"/>
                                             </Grid.ColumnDefinitions>
 
                                             <!--Icon Lapin, femme, homme, etc...-->
-                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                                                <Image Source="{Binding Icon}" HeightRequest="120" WidthRequest="120" BackgroundColor="Black"/>
+                                            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                                                <Image Source="{Binding Icon}" Grid.Column="0" HeightRequest="100" WidthRequest="600" BackgroundColor="Black"/>
                                             </StackLayout>
 
                                             <!--Ne me demande pas pk il y a une seconde BoxView stp-->
@@ -96,43 +96,16 @@
                                     <Grid HorizontalOptions="FillAndExpand">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="3.5*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <BoxView Grid.Column="1" BackgroundColor="#F2F4F8" WidthRequest="1" HorizontalOptions="Start" 
-                                             VerticalOptions="Fill"/>
 
                                         <!--On ajoute chaque composant dans un StackLayout-->
-                                        <StackLayout Grid.Column="2" Spacing="10">
+                                        <StackLayout Grid.Column="0" Spacing="10">
 
                                             <!--Ou plusieurs StackLayout xD-->
                                             <!--Le contenu est le meme que celui de la CollectionView plus haut qui est instancié dans la mainPage.xaml.cs disponible à l'endroit "private ObservableCollection
                                                 <Family>GetFamilyInfo()" vers la ligne 200 si pas trop de modif-->
-                                            <StackLayout x:Name="imageview" BindableLayout.ItemsSource="{Binding familyMember}" HorizontalOptions ="Center"  VerticalOptions ="Start" >
-                                                <BindableLayout.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <!--cadre rond pour mettre les photos de la petite famille-->
-                                                        <Frame Margin="10"
-                                                                   BorderColor="Black"
-                                                                   CornerRadius="50"
-                                                                   HeightRequest="60"
-                                                                   WidthRequest="60"
-                                                                   IsClippedToBounds="True"
-                                                                   HorizontalOptions="Center"                                                                      >
-
-                                                            <!--photos de la petite famille, To modify: Potentiellement recadrer les photos-->
-                                                            <Image Source="{Binding Picture}" Aspect="AspectFit"  Margin="-20"
-                                                                     HeightRequest="100"
-                                                                     WidthRequest="100"
-                                                                     >
-                                                            </Image>
-
-                                                        </Frame>
-                                                    </DataTemplate>
-                                                </BindableLayout.ItemTemplate>
-                                            </StackLayout>
-
+                                            
                                             <!--Description de la partie Text sous chaque photo-->
                                             <StackLayout x:Name="detailsview" BindableLayout.ItemsSource="{Binding familyMember}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,20">
                                                 <BindableLayout.ItemTemplate>
@@ -142,19 +115,11 @@
                                                             <Label.FormattedText>
                                                                 <FormattedString>
                                                                     <FormattedString.Spans >
-                                                                        <Span Text="Description: " FontAttributes="Bold"/>
+                                                                        <Span Text="Recette: " FontAttributes="Bold"/>
                                                                         <Span Text="{Binding Description}" />
                                                                         <!--Description-->
-                                                                        <Span Text="&#x0a;Date de naissance: " FontAttributes="Bold"/>
+                                                                        <Span Text="&#x0a;Conseils Nutritionnels: " FontAttributes="Bold"/>
                                                                         <Span Text="{Binding BirthDate}" />
-                                                                        <!--Date de naissance-->
-                                                                        <Span Text="&#x0a;Point Positif: " FontAttributes="Bold"/>
-                                                                        <Span Text="{Binding PositifPoint}" />
-                                                                        <!--Point positif-->
-                                                                        <Span Text="&#x0a;Point Négatif: " FontAttributes="Bold"/>
-                                                                        <Span Text="{Binding NegatifPoint}" />
-                                                                        <!--point negatif-->
-
                                                                     </FormattedString.Spans>
                                                                 </FormattedString>
                                                             </Label.FormattedText>
