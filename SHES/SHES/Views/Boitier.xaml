@@ -29,12 +29,12 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label x:Name="Batterie" Text="Batterie" Grid.Row="0"></Label>
-            <Label x:Name="NomBoitier" Text="Modèle de boitier" Grid.Row="1"></Label>
+            <Label x:Name="SwitchName" Text="Connecté" Font="Bold,21" Grid.Row="0" Grid.Column="1" Margin="50,45,0,0"></Label>
+            <Label x:Name="Batterie" Text="Batterie" Grid.Row="1" Grid.Column="1" Margin="30,8,0,0" Font="Bold,21" ></Label>
+            <Label x:Name="NomBoitier" Text="Modèle de boitier" Grid.Row="0" Grid.RowSpan="2" Margin="10,8,0,0" Font="Bold,21"></Label>
             <Label x:Name="Bluetooth" Text="Bluetooth connection" Grid.Row="2"></Label>
-            <Image Source="DogPicture.jpg" Grid.Column="1" Grid.Row="1" HeightRequest="75" WidthRequest="75" BackgroundColor="Black" HorizontalOptions="Center" VerticalOptions="Center"></Image>
+            <Image Source="DogPicture.jpg" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="10,45,30,0" HeightRequest="150" WidthRequest="150" BackgroundColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"></Image>
             <Switch x:Name="Switch1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" OnColor="White" ThumbColor="Green" Margin="0,-95,140,0" Toggled="Switch_Toggled_1"/>
-            <Label x:Name="SwitchName" Text="Connecté" Font="Bold,21" Grid.Row="1" Grid.Column="1" Margin="50,15,0,0"></Label>
 
         </Grid>
     </ContentPage.Content>
