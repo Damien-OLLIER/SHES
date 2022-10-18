@@ -19,6 +19,10 @@ namespace SHES.Views
         }
 
         public ObservableCollection<Family> MyFamily { get => GetFamilyInfo(); }
+        public ObservableCollection<Family> MyFamily2 { get => GetFamilyInfo2(); }
+        public ObservableCollection<Family> MyFamily3 { get => GetFamilyInfo3(); }
+
+
 
         // GetFamilyInfo() retourne une collection d'objet de la classe Family utilsé dans l'onglet family afin d'afficher l'expander (family  Tree)
         private ObservableCollection<Family> GetFamilyInfo()
@@ -27,16 +31,49 @@ namespace SHES.Views
             {
                 new Family { Name = "soupe de lentilles orientale", Color = "#B96CBD", Icon = "soupeLentillesOrientale.png", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "test", PositifPoint = "S'énerve seulement quand elle a faim", Description = "250 g de lentilles vertes" + Environment.NewLine + "300 g d’épinards frais " + Environment.NewLine + "1 citron" + Environment.NewLine + "1 oignon " + Environment.NewLine + "2 cuil. à soupe d’huile d’olive" + Environment.NewLine + "1/2 cuil. à café de cumin en poudre" + Environment.NewLine + "1 tablette de bouillon de volaille " + Environment.NewLine + "sel poivre" + Environment.NewLine  } } },
 
-                new Family { Name = "Bo Bun au Boeuf", Color = "#49A24D", Icon = "BoBunBoeuf.jpg", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "BoBunBoeuf.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Loulou très calin", Description = "600 g de basse côte de bœuf1 batavia " + Environment.NewLine + " 3 carottes" + Environment.NewLine + "300 g de germes de soja" + Environment.NewLine + "1 concombre" + Environment.NewLine + "250 g de vermicelle de riz" + Environment.NewLine + "12 nems aux légumes (chez le traiteur chinois ou type Picard)" + Environment.NewLine + "1 gousse d’ail " + Environment.NewLine + "2 oignons" + Environment.NewLine + "80 g de cacahuètes" + Environment.NewLine + "2 cuil. à soupe d’huile" + Environment.NewLine + "10 cl de sauce soja" + Environment.NewLine + "1 bouquet de coriandre" + Environment.NewLine  } } },
+                new Family { Name = "Bo Bun au Boeuf", Color = "#49A24D", Icon = "BoBunBoeuf.jpge", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "BoBunBoeuf.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Loulou très calin", Description = "600 g de basse côte de bœuf1 batavia " + Environment.NewLine + " 3 carottes" + Environment.NewLine + "300 g de germes de soja" + Environment.NewLine + "1 concombre" + Environment.NewLine + "250 g de vermicelle de riz" + Environment.NewLine + "12 nems aux légumes (chez le traiteur chinois ou type Picard)" + Environment.NewLine + "1 gousse d’ail " + Environment.NewLine + "2 oignons" + Environment.NewLine + "80 g de cacahuètes" + Environment.NewLine + "2 cuil. à soupe d’huile" + Environment.NewLine + "10 cl de sauce soja" + Environment.NewLine + "1 bouquet de coriandre" + Environment.NewLine  } } },
 
-                new Family { Name = "Crepes", Color = "#FDA838", Icon = "RabbitIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Très doux et adore les caresses", Description = "Exemple de rectte" } } },
+                new Family { Name = "Boudin aux pommes", Color = "#FDA838", Icon = "Boudin.jpg", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Très doux et adore les caresses", Description = "250 g de lentilles vertes" + Environment.NewLine + "300 g d’épinards frais " + Environment.NewLine + "1 citron" + Environment.NewLine + "1 oignon " + Environment.NewLine + "2 cuil. à soupe d’huile d’olive" + Environment.NewLine + "1/2 cuil. à café de cumin en poudre" + Environment.NewLine + "1 tablette de bouillon de volaille " + Environment.NewLine + "sel poivre" + Environment.NewLine } } },
 
-                new Family { Name = "gauffres",  Color = "#F75355",  Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Il peut sauver des vies en mer", Description = "Exemple de rectte" } } },
+                new Family { Name = "Lentille aux oeufs pochés",  Color = "#F75355",  Icon = "Lentille.jpg", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Il peut sauver des vies en mer", Description = "250 g de lentilles vertes" + Environment.NewLine + "300 g d’épinards frais " + Environment.NewLine + "1 citron" + Environment.NewLine + "1 oignon " + Environment.NewLine + "2 cuil. à soupe d’huile d’olive" + Environment.NewLine + "1/2 cuil. à café de cumin en poudre" + Environment.NewLine + "1 tablette de bouillon de volaille " + Environment.NewLine + "sel poivre" + Environment.NewLine } } },
 
-                new Family { Name = "Crumble aux pommes",  Color = "#00C6AE", Icon = "CatIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Son ronronnement vous réconfortera", Description = "Exemple de rectte" } } },
+                new Family { Name = "Salade de pousses d'épinard",  Color = "#00C6AE", Icon = "Salade.jpg", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Son ronronnement vous réconfortera", Description = "600 g de basse côte de bœuf1 batavia " + Environment.NewLine + " 3 carottes" + Environment.NewLine + "300 g de germes de soja" + Environment.NewLine + "1 concombre" + Environment.NewLine + "250 g de vermicelle de riz" + Environment.NewLine + "12 nems aux légumes (chez le traiteur chinois ou type Picard)" + Environment.NewLine + "1 gousse d’ail " + Environment.NewLine + "2 oignons" + Environment.NewLine + "80 g de cacahuètes" + Environment.NewLine + "2 cuil. à soupe d’huile" + Environment.NewLine + "10 cl de sauce soja" + Environment.NewLine + "1 bouquet de coriandre" + Environment.NewLine } } },
 
             };
         }
+        private ObservableCollection<Family> GetFamilyInfo2()
+        {
+            return new ObservableCollection<Family>
+            {
+                new Family { Name = "Boudin aux pommes", Color = "#FDA838", Icon = "Boudin.jpg", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Très doux et adore les caresses", Description = "250 g de lentilles vertes" + Environment.NewLine + "300 g d’épinards frais " + Environment.NewLine + "1 citron" + Environment.NewLine + "1 oignon " + Environment.NewLine + "2 cuil. à soupe d’huile d’olive" + Environment.NewLine + "1/2 cuil. à café de cumin en poudre" + Environment.NewLine + "1 tablette de bouillon de volaille " + Environment.NewLine + "sel poivre" + Environment.NewLine } } },
+
+                new Family { Name = "soupe de lentilles orientale", Color = "#B96CBD", Icon = "soupeLentillesOrientale.png", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "test", PositifPoint = "S'énerve seulement quand elle a faim", Description = "250 g de lentilles vertes" + Environment.NewLine + "300 g d’épinards frais " + Environment.NewLine + "1 citron" + Environment.NewLine + "1 oignon " + Environment.NewLine + "2 cuil. à soupe d’huile d’olive" + Environment.NewLine + "1/2 cuil. à café de cumin en poudre" + Environment.NewLine + "1 tablette de bouillon de volaille " + Environment.NewLine + "sel poivre" + Environment.NewLine  } } },
+
+                new Family { Name = "Bo Bun au Boeuf", Color = "#49A24D", Icon = "BoBunBoeuf.jpge", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "BoBunBoeuf.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Loulou très calin", Description = "600 g de basse côte de bœuf1 batavia " + Environment.NewLine + " 3 carottes" + Environment.NewLine + "300 g de germes de soja" + Environment.NewLine + "1 concombre" + Environment.NewLine + "250 g de vermicelle de riz" + Environment.NewLine + "12 nems aux légumes (chez le traiteur chinois ou type Picard)" + Environment.NewLine + "1 gousse d’ail " + Environment.NewLine + "2 oignons" + Environment.NewLine + "80 g de cacahuètes" + Environment.NewLine + "2 cuil. à soupe d’huile" + Environment.NewLine + "10 cl de sauce soja" + Environment.NewLine + "1 bouquet de coriandre" + Environment.NewLine  } } },
+
+                new Family { Name = "Salade de pousses d'épinard",  Color = "#00C6AE", Icon = "Salade.jpg", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Son ronronnement vous réconfortera", Description = "600 g de basse côte de bœuf1 batavia " + Environment.NewLine + " 3 carottes" + Environment.NewLine + "300 g de germes de soja" + Environment.NewLine + "1 concombre" + Environment.NewLine + "250 g de vermicelle de riz" + Environment.NewLine + "12 nems aux légumes (chez le traiteur chinois ou type Picard)" + Environment.NewLine + "1 gousse d’ail " + Environment.NewLine + "2 oignons" + Environment.NewLine + "80 g de cacahuètes" + Environment.NewLine + "2 cuil. à soupe d’huile" + Environment.NewLine + "10 cl de sauce soja" + Environment.NewLine + "1 bouquet de coriandre" + Environment.NewLine } } },
+
+                new Family { Name = "Lentille aux oeufs pochés",  Color = "#F75355",  Icon = "Lentille.jpg", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Il peut sauver des vies en mer", Description = "250 g de lentilles vertes" + Environment.NewLine + "300 g d’épinards frais " + Environment.NewLine + "1 citron" + Environment.NewLine + "1 oignon " + Environment.NewLine + "2 cuil. à soupe d’huile d’olive" + Environment.NewLine + "1/2 cuil. à café de cumin en poudre" + Environment.NewLine + "1 tablette de bouillon de volaille " + Environment.NewLine + "sel poivre" + Environment.NewLine } } },
+
+            };
+        }
+        private ObservableCollection<Family> GetFamilyInfo3()
+        {
+            return new ObservableCollection<Family>
+            {
+                new Family { Name = "Bo Bun au Boeuf", Color = "#49A24D", Icon = "BoBunBoeuf.jpge", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "BoBunBoeuf.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Loulou très calin", Description = "600 g de basse côte de bœuf1 batavia " + Environment.NewLine + " 3 carottes" + Environment.NewLine + "300 g de germes de soja" + Environment.NewLine + "1 concombre" + Environment.NewLine + "250 g de vermicelle de riz" + Environment.NewLine + "12 nems aux légumes (chez le traiteur chinois ou type Picard)" + Environment.NewLine + "1 gousse d’ail " + Environment.NewLine + "2 oignons" + Environment.NewLine + "80 g de cacahuètes" + Environment.NewLine + "2 cuil. à soupe d’huile" + Environment.NewLine + "10 cl de sauce soja" + Environment.NewLine + "1 bouquet de coriandre" + Environment.NewLine  } } },
+
+                new Family { Name = "Lentille aux oeufs pochés",  Color = "#F75355",  Icon = "Lentille.jpg", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Il peut sauver des vies en mer", Description = "250 g de lentilles vertes" + Environment.NewLine + "300 g d’épinards frais " + Environment.NewLine + "1 citron" + Environment.NewLine + "1 oignon " + Environment.NewLine + "2 cuil. à soupe d’huile d’olive" + Environment.NewLine + "1/2 cuil. à café de cumin en poudre" + Environment.NewLine + "1 tablette de bouillon de volaille " + Environment.NewLine + "sel poivre" + Environment.NewLine } } },
+                            
+                new Family { Name = "soupe de lentilles orientale", Color = "#B96CBD", Icon = "soupeLentillesOrientale.png", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "test", PositifPoint = "S'énerve seulement quand elle a faim", Description = "250 g de lentilles vertes" + Environment.NewLine + "300 g d’épinards frais " + Environment.NewLine + "1 citron" + Environment.NewLine + "1 oignon " + Environment.NewLine + "2 cuil. à soupe d’huile d’olive" + Environment.NewLine + "1/2 cuil. à café de cumin en poudre" + Environment.NewLine + "1 tablette de bouillon de volaille " + Environment.NewLine + "sel poivre" + Environment.NewLine  } } },
+                       
+                new Family { Name = "Salade de pousses d'épinard",  Color = "#00C6AE", Icon = "Salade.jpg", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Son ronronnement vous réconfortera", Description = "600 g de basse côte de bœuf1 batavia " + Environment.NewLine + " 3 carottes" + Environment.NewLine + "300 g de germes de soja" + Environment.NewLine + "1 concombre" + Environment.NewLine + "250 g de vermicelle de riz" + Environment.NewLine + "12 nems aux légumes (chez le traiteur chinois ou type Picard)" + Environment.NewLine + "1 gousse d’ail " + Environment.NewLine + "2 oignons" + Environment.NewLine + "80 g de cacahuètes" + Environment.NewLine + "2 cuil. à soupe d’huile" + Environment.NewLine + "10 cl de sauce soja" + Environment.NewLine + "1 bouquet de coriandre" + Environment.NewLine } } },
+                                          
+                new Family { Name = "Boudin aux pommes", Color = "#FDA838", Icon = "Boudin.jpg", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Exemple de conseil nutrionnel", Picture = "DogPicture.jpg", NegatifPoint = "Exemple de recette", PositifPoint = "Très doux et adore les caresses", Description = "250 g de lentilles vertes" + Environment.NewLine + "300 g d’épinards frais " + Environment.NewLine + "1 citron" + Environment.NewLine + "1 oignon " + Environment.NewLine + "2 cuil. à soupe d’huile d’olive" + Environment.NewLine + "1/2 cuil. à café de cumin en poudre" + Environment.NewLine + "1 tablette de bouillon de volaille " + Environment.NewLine + "sel poivre" + Environment.NewLine } } },
+
+            };
+        }
+
         public class FamilyMember //Anciennement Speaker
         {
             //
@@ -82,10 +119,38 @@ namespace SHES.Views
         {
             // On obtient les infos de l'expander lorsque l'event est trigger 
             var expander = sender as Expander;
-
-            //on essaie d'obtenir les infos sur le detailsview 
-            var imageview = expander.FindByName<StackLayout>("imageview");
             var detailsview = expander.FindByName<StackLayout>("detailsview");
+
+            expander = expander.FindByName<Expander>("expanderFamily");
+
+            var test = CollectionViewAliment.ItemsSource;
+            var test2 = CollectionViewAliment.ItemTemplate;
+
+
+            /*foreach (var Test in test)
+            {
+                var ExpanderIteration = Test as SHES.Views.Alimentation.Family;
+
+                ExpanderIteration.IsExpanded = true;
+                // var iteration = ExpanderIteration.IsExpanded as Expander;
+
+            }*/
+            bool ExpenderTrue = false;
+
+            if( expander.IsExpanded)
+            { 
+                ExpenderTrue = true;   
+            }
+
+            foreach (var a in MyFamily) 
+            {
+                a.IsExpanded = false;
+            }
+
+            //CollectionViewAliment.SetBinding(CollectionView.ItemsSourceProperty, "MyFamily");
+
+
+            //BindableLayout.SetItemsSource(this, viewModel1.models);
 
             //Ouverture ou fermeture suivant l'etat initial de l'expander
             if (expander.IsExpanded)
@@ -113,7 +178,7 @@ namespace SHES.Views
             gif.IsVisible = true;
             await Task.Delay(1000);
             gif.IsVisible = false;
-
+            CollectionViewAliment.SetBinding(ItemsView.ItemsSourceProperty, "MyFamily2");
             CollectionViewAliment.IsVisible = true;
         }
 
@@ -127,6 +192,7 @@ namespace SHES.Views
             gif.IsVisible = true;
             await Task.Delay(1000);
             gif.IsVisible = false;
+            CollectionViewAliment.SetBinding(ItemsView.ItemsSourceProperty, "MyFamily3");
             CollectionViewAliment.IsVisible = true;
         }
 
@@ -141,8 +207,10 @@ namespace SHES.Views
             await Task.Delay(1000);
             gif.IsVisible = false;
 
-            CollectionViewAliment.IsVisible = true;
+            CollectionViewAliment.SetBinding(ItemsView.ItemsSourceProperty, "MyFamily3");
 
+            CollectionViewAliment.IsVisible = true;
         }
+
     }
 }

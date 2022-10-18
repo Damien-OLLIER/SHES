@@ -20,7 +20,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Image x:Name="gif" Source="Loading.gif" IsAnimationPlaying="True" IsVisible="false" Margin="0,250,0,0"/>
-            <CollectionView x:Name="CollectionViewAliment" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" SelectionMode="Single" ItemsSource="{Binding MyFamily}" IsVisible="true" >
+            <CollectionView x:Name="CollectionViewAliment" SelectionMode="None" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  ItemsSource="{Binding MyFamily}" IsVisible="true"  >
 
                 <!-- Titre en Haut du  StackLayout-->
                 <CollectionView.Header>
@@ -46,7 +46,7 @@
                 <!--Contenu du StackLayout-->
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <pv:PancakeView x:Name="PancakeViewAliment"  IsVisible="true" BackgroundColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"   >
+                        <pv:PancakeView x:Name="PancakeViewAliment"   IsVisible="true" BackgroundColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"   >
                             <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -55,14 +55,13 @@
 
                                 <!--Trait vertical sur la Gauche avec les differentes couleurs-->
                                 <BoxView BackgroundColor="{Binding Color}" WidthRequest="3" HorizontalOptions="Start"
-                                     VerticalOptions="FillAndExpand" />
+                                     VerticalOptions="FillAndExpand"  />
 
                                 <!--Les informations contenu dans cette CollectionView sont dans la mainPage.xaml.cs disponible à l'endroit "private ObservableCollection
                                     <Family>GetFamilyInfo()" vers la ligne 200 si pas trop de modif-->
                                 <!-- To modify: enlever la partie Isexpanded et faire en sorte d'avoir seulement 1 seul expender a la fois (Fermer les autres)  -->
-                                
-                                
-                                <xct:Expander x:Name="expanderFamily"  Grid.Column="1" Tapped="Expander_Tapped" CollapseAnimationLength="500" IsExpanded="{Binding IsExpanded}" >
+                                                                
+                                <xct:Expander x:Name="expanderFamily"  Grid.Column="1" Tapped="Expander_Tapped" CollapseAnimationLength="500" IsExpanded="{Binding IsExpanded}"  >
 
                                     <!--Cette partie est la partie Toujours visible avec l'icon est le mom du membre de la famille-->
                                     <xct:Expander.Header >
