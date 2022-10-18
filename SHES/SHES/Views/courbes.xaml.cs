@@ -29,15 +29,15 @@ namespace SHES.Views
         {
             return new ObservableCollection<Family>
             {
-                new Family { Name = "Glucose", Color = "#B96CBD", Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "22 Juin 1998", Picture = "Taux_Glucose.png", NegatifPoint = "Elle a tout le temps faim", PositifPoint = "S'énerve seulement quand elle a faim", Description = "Taux de glucose dans le sang en fonction de l'avancement de la grossesse" } } },
+                new Family { Name = "Vitamine B12", Color = "#B96CBD", Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "22 Juin 1998", Picture = "Taux_Glucose.png", NegatifPoint = "Elle a tout le temps faim", PositifPoint = "S'énerve seulement quand elle a faim", Description = "Taux de glucose dans le sang en fonction de l'avancement de la grossesse" } } },
 
-                new Family { Name = "Vitamine X", Color = "#49A24D", Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "24 Mars 1998", Picture = "graph2.png", NegatifPoint = "Loulou trop calin", PositifPoint = "Loulou très calin", Description = "Exemple de description" } } },
+                new Family { Name = "Vitamine D", Color = "#49A24D", Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "24 Mars 1998", Picture = "graph2.png", NegatifPoint = "Loulou trop calin", PositifPoint = "Loulou très calin", Description = "Exemple de description" } } },
 
                 new Family { Name = "Fer", Color = "#FDA838", Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "20 Septembre 2022", Picture = "graph3.png", NegatifPoint = "Cacher tous les câbles électriques", PositifPoint = "Très doux et adore les caresses", Description = "Exemple de description" } } },
 
                 new Family { Name = "Calcium",  Color = "#F75355",  Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Prochainement", Picture = "graph2.png", NegatifPoint = "Ramasser son caca", PositifPoint = "Il peut sauver des vies en mer", Description = "Exemple de description" } } },
 
-                new Family { Name = "Nitrate de Potassium",  Color = "#00C6AE", Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Prochainement", Picture = "Taux_Glucose.png", NegatifPoint = "Il faut des câlins seulement quand il le souhaite", PositifPoint = "Son ronronnement vous réconfortera", Description = "Exemple de description" } } },
+                new Family { Name = "Prochainementmod",  Color = "#00C6AE", Icon = "DogIcon.PNG", IsExpanded = false, familyMember = new ObservableCollection<FamilyMember>{ new FamilyMember { BirthDate = "Prochainement", Picture = "Taux_Glucose.png", NegatifPoint = "Il faut des câlins seulement quand il le souhaite", PositifPoint = "Son ronronnement vous réconfortera", Description = "Exemple de description" } } },
 
             };
         }
