@@ -10,7 +10,7 @@ namespace SHES.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<Model> DataStore => DependencyService.Get<IDataStore<Model>>();
 
         bool isBusy = false;
         public bool IsBusy

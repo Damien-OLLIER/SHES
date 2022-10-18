@@ -49,7 +49,7 @@ namespace SHES.ViewModels
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+            Model newItem = new Model()
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,

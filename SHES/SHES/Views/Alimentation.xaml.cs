@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SHES.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -13,10 +14,13 @@ namespace SHES.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Alimentation : ContentPage
     {
+
         public Alimentation()
         {
             InitializeComponent();
         }
+
+        AlimentationViewModel alimentationViewModel = new AlimentationViewModel();
 
         public ObservableCollection<Family> MyFamily { get => GetFamilyInfo(); }
         public ObservableCollection<Family> MyFamily2 { get => GetFamilyInfo2(); }

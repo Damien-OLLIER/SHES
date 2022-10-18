@@ -10,7 +10,7 @@ namespace SHES.Views
 {
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Model Item { get; set; }
 
         public NewItemPage()
         {
