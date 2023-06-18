@@ -10,7 +10,10 @@ So I created a smartphone application that serves as an interface with the equip
 It's a proof of concept, the application is an empty shell.
 Here are the various visuals of the application, which can be installed on Android.
 
-![Alt text](https://github.com/Damien-OLLIER/SHES/blob/master/1687106719997.jpg)
-![Alt text](https://github.com/Damien-OLLIER/SHES/blob/master/1687106720027.jpg)
+| ![Alt text](https://github.com/Damien-OLLIER/SHES/blob/master/1687106719997.jpg) | ![Alt text](https://github.com/Damien-OLLIER/SHES/blob/master/1687106720027.jpg)|
+| Picture 3 | Picture 4 |
+| ![Picture 3](path/to/picture3.jpg) | ![Picture 4](path/to/picture4.jpg) |
+
+
 ![Alt text](https://github.com/Damien-OLLIER/SHES/blob/master/1687106720006.jpg)
 ![Alt text](https://github.com/Damien-OLLIER/SHES/blob/master/1687106720018.jpg)
