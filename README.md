@@ -12,9 +12,9 @@ Here are the various visuals of the application, which can be installed on Andro
 
 Alimentation Tab          |  Profil Tab
 :-------------------------:|:-------------------------:
-![](https://github.com/Damien-OLLIER/SHES/blob/master/1687106719997.jpg)  |  ![](https://github.com/Damien-OLLIER/SHES/blob/master/1687106720027.jpg)
+![](https://github.com/Damien-OLLIER/SHES/blob/master/SHES/1687106719997.jpg)  |  ![](https://github.com/Damien-OLLIER/SHES/blob/master/SHES/1687106720027.jpg)
 Equipment Tab          |  Monitoring Tab
-![](https://github.com/Damien-OLLIER/SHES/blob/master/1687106720006.jpg)  |  ![](https://github.com/Damien-OLLIER/SHES/blob/master/1687106720018.jpg)
+![](https://github.com/Damien-OLLIER/SHES/blob/master/SHES/1687106720006.jpg)  |  ![](https://github.com/Damien-OLLIER/SHES/blob/master/SHES/1687106720018.jpg)
 
 
 
