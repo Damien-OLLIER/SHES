@@ -10,5 +10,4 @@ So I created a smartphone application that serves as an interface with the equip
 It's a proof of concept, the application is an empty shell.
 Here are the various visuals of the application, which can be installed on Android.
 
-
-Translated with www.DeepL.com/Translator (free version)
+![Alt text]([image link](https://github.com/Damien-OLLIER/SHES/blob/master/1687106720027.jpg)https://github.com/Damien-OLLIER/SHES/blob/master/1687106720027.jpg)
